@@ -4,15 +4,72 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:padding="@dimen/inner_activity_space"
+    android:background="@color/colorPrimary">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fitvance_title"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:textSize="@dimen/super_title_size"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:textColor="@android:color/darker_gray"
+            android:text="@string/slogan_subtitle"
+            android:layout_marginBottom="@dimen/inner_activity_space"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/user_hint"
+                    android:gravity="center"
+                    android:padding="@dimen/elements_internal_space_size"
+                    android:background="@android:color/white"
+                    android:drawableLeft="@drawable/profile"
+                    android:drawableTint="@color/colorPrimary"
+                    android:layout_marginBottom="@dimen/between_elements_space"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/password_hint"
+                    android:drawableLeft="@drawable/key"
+                    android:padding="@dimen/elements_internal_space_size"
+                    android:background="@android:color/white"
+                    android:drawableTint="@color/colorPrimary"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/between_elements_space"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorAccent"
+                android:textColor="@android:color/white"
+                android:text="@string/login_text"></Button>
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

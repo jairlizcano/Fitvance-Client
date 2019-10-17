@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Fitvance Client</string>
+    <string name="user_hint">Usuario</string>
+    <string name="password_hint">Contraseña</string>
+    <string name="login_text">Iniciar sesión</string>
+    <string name="fitvance_title">Fitvance</string>
+    <string name="slogan_subtitle">¡Es hora de hacerlo!</string>
 </resources>
