@@ -6,70 +6,82 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:padding="@dimen/inner_activity_space"
-    android:background="@color/colorPrimary">
+    android:background="@drawable/background">
 
     <LinearLayout
-        android:orientation="vertical"
+        android:id="@+id/ll_login_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/fitvance_title"
             android:gravity="center"
-            android:textColor="@android:color/white"
-            android:textStyle="bold"
+            android:text="@string/fitvance_title"
             android:textAllCaps="true"
-            android:textSize="@dimen/super_title_size"/>
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/super_title_size"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/inner_activity_space"
             android:gravity="center"
-            android:textStyle="italic"
-            android:textColor="@android:color/darker_gray"
             android:text="@string/slogan_subtitle"
-            android:layout_marginBottom="@dimen/inner_activity_space"/>
+            android:textColor="@android:color/white"
+            android:textStyle="italic" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/user_hint"
-                    android:gravity="center"
-                    android:padding="@dimen/elements_internal_space_size"
-                    android:background="@android:color/white"
-                    android:drawableLeft="@drawable/profile"
-                    android:drawableTint="@color/colorPrimary"
-                    android:layout_marginBottom="@dimen/between_elements_space"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/between_elements_space"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/profile"
+                android:drawableTint="@color/colorPrimary"
+                android:gravity="center"
+                android:hint="@string/user_hint"
+                android:padding="@dimen/elements_internal_space_size" />
 
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="@string/password_hint"
-                    android:drawableLeft="@drawable/key"
-                    android:padding="@dimen/elements_internal_space_size"
-                    android:background="@android:color/white"
-                    android:drawableTint="@color/colorPrimary"
-                    android:gravity="center"
-                    android:layout_marginBottom="@dimen/between_elements_space"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/between_elements_space"
+                android:background="@android:color/white"
+                android:drawableLeft="@drawable/key"
+                android:drawableTint="@color/colorPrimary"
+                android:gravity="center"
+                android:hint="@string/password_hint"
+                android:padding="@dimen/elements_internal_space_size" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorAccent"
-                android:textColor="@android:color/white"
-                android:text="@string/login_text"></Button>
+                android:text="@string/login_text"
+                android:textColor="@android:color/white"></Button>
         </LinearLayout>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/all_rights_reserved_text"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ll_login_container" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
