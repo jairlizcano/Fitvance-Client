@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="inner_activity_space">50dp</dimen>
+    <dimen name="inner_activity_space">30dp</dimen>
     <dimen name="between_elements_space">10dp</dimen>
     <dimen name="super_title_size">30dp</dimen>
     <dimen name="elements_internal_space_size">10dp</dimen>
+    <dimen name="small_letter_size">12dp</dimen>
 </resources>
